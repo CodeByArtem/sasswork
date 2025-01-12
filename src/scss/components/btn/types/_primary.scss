@@ -1,4 +1,4 @@
-@if index ($btn-types, primary) {
+@if index($btn-types, primary) {
 .btn--primary {
 	background-color: #f07f2e;
 

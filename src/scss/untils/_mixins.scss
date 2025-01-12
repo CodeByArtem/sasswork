@@ -29,11 +29,11 @@
 
 
 
-@mixin frame($width, $height: $width, $is-critical: false ) {
+@mixin frame($width, $height: $width, $is-circle: false ) {
     width: $width;
     height: $height;
 
-    @if $is-critical {
+    @if $is-circle {
         border-radius: 50%;
         overflow: hidden;
     }
@@ -55,7 +55,7 @@
 
 
         &:hover {
-            background-color: rgba(#fff, 0, 3);
+            background-color: rgba(#fff, 0.3);
         }
     }
 &::-webkit-scrollbar-thumb {

@@ -1,23 +1,21 @@
-@if index ($btn-types, primary) {
-.btn--primary {
-	background-color: #f07f2e;
+@if index($btn-types, success) {
+	/* == Success == */
+	.btn--success {
+		background-color: #82c43c;
 
-
-	&:active {
-		background-color: #d14a00;
-	}
-
-	@media (hover: hover) {
-		&:hover,
-		&:focus {
-			background-color: #f15c27;
-			box-shadow: 0 4px 10px 0 rgba(240, 127, 46, 0.25);
+		&:active {
+			background-color: darken(#82c43c, 10%);
 		}
 
-	}
+		@media (hover: hover) {
+			&:hover,
+			&:focus {
+				background-color: lighten(#82c43c, 10%);
+			}
+		}
 
-	&[disabled] {
-		background-color: #b5b5be;
+		&[disabled] {
+			background-color: #b5b5be;
+		}
 	}
-}
 }
