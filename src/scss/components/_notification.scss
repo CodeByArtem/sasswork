@@ -1,0 +1,16 @@
+@use "../untils/placeholders";
+@use "../untils/variables" as var;
+@use "../untils/fuctions" as fn;
+@use "../untils/mixins" as mx;
+
+.notification {
+	flex-shrink: 0;
+	display: block;
+	min-width: 28px;
+	height: 20px;
+	padding: 0 10px;
+
+	color: fn.get-color("light-primary");
+	border-radius: 12px;
+	background-color: fn.get-color("danger");
+}
