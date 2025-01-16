@@ -4,8 +4,7 @@
 @use "../untils/mixins" as mx;
 
 .companies {
-	grid-area: main;
-
+	display: grid;
 }
 
 .hero-title {
@@ -16,10 +15,22 @@
 	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Легкая тень для текста
 
 	display: inline;
+	@include mx.mq("lg") {
+		padding-top: 37px;
+		padding-left: 36px;
+	}
+}
+.paragraf {
+
+	padding-left: 17px;
+	@include mx.mq("lg") {
+		padding-left: 36px;
+	}
+
 }
 
-span {
-
+.svg-button {
+	display: flex;
 
 }
 
@@ -40,7 +51,7 @@ span {
 }
 
 .hero-list-item {
-	width: 343px;
+	width: 359px;
 	height: 196px;
 	background-color: fn.get-color("dark-tertiary");
 	border-radius: 24px;

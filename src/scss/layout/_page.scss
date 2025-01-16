@@ -1,3 +1,6 @@
+@use "../untils/placeholders";
+@use "../untils/variables" as var;
+@use "../untils/fuctions" as fn;
 @use "../untils/mixins" as mx;
 
 
@@ -13,7 +16,36 @@
 
 		grid-template-areas:
 		"sidebar header"
-		"sideebar main";
+		"sidebar main";
+
+	}
+}
+
+.compani {
+	@include mx.mq("lg") {
+		display: grid;
+		grid-template-columns: 248px 1fr; /* 248px для sidebar, остальное пространство для main */
+		grid-template-rows: 68px 1fr; /* 68px для header, остальное пространство для main */
+		grid-template-areas:
+      "sidebar header"
+      "sidebar main"; /* sidebar и header на одной строке, а main на второй */
+
+		height: 100vh; /* Обеспечиваем, чтобы контейнер занимал всю высоту экрана */
+	}
+
+	.sidebar {
+		grid-area: sidebar; /* sidebar в своей области */
+
+	}
+
+	.header {
+		grid-area: header; /* header в своей области */
+
+	}
+
+	.main {
+		grid-area: main; /* main в своей области */
+		padding: 16px; /* Добавляем отступы, если нужно */
 
 	}
 }
