@@ -51,7 +51,7 @@
 }
 
 .hero-list-item {
-	width: 359px;
+	width: 320px;
 	height: 196px;
 	background-color: fn.get-color("dark-tertiary");
 	border-radius: 24px;
@@ -63,6 +63,9 @@
 		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);  // Усиленная тень
 		background-color: fn.get-color("accent-light"); // Подсветка фона
 		border: 2px solid fn.get-color("accent-primary"); // Подсветка границы
+	}
+	@include mx.mq("sm") {
+		width: 359px;
 	}
 }
 
@@ -84,6 +87,7 @@
 		stroke: fn.get-color("accent-primary");
 		transform: scale(1.1);  // Увеличение иконки при наведении
 	}
+
 }
 
 .hero-list-title {
