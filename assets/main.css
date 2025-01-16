@@ -1330,7 +1330,7 @@ tbody td::after {
 }
 
 .hero-list-item {
-  width: 359px;
+  width: 320px;
   height: 196px;
   background-color: #292932;
   border-radius: 24px;
@@ -1434,6 +1434,11 @@ tbody td::after {
 }
 .blu-icon:hover {
   stroke: #f07f2e;
+}
+@media only screen and (min-width: 375px){
+  .hero-list-item {
+    width: 359px;
+  }
 }
 @media only screen and (min-width: 768px){
   .main {
