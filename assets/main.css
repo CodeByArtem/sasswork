@@ -167,7 +167,7 @@ meter {
   letter-spacing: 0.025em;
 }
 
-.page-title-accent {
+.hero-title, .page-title-accent {
   font-size: 20px;
   font-weight: 600;
   line-height: 1.44;
@@ -181,7 +181,7 @@ body {
   letter-spacing: 0.03em;
 }
 
-.reports-title span, .tasks-title span, .board-caption, .co-workers-table caption span, .co-workers-title span {
+.hero-list-title, .reports-title span, .tasks-title span, .board-caption, .co-workers-table caption span, .co-workers-title span {
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
@@ -195,7 +195,7 @@ body {
   letter-spacing: 0.04em;
 }
 
-.badge-danger, .badge-warning, .badge-success, .co-workers-position, .co-workers-accept {
+.hero-list-button, .badge-danger, .badge-warning, .badge-success, .co-workers-position, .co-workers-accept {
   color: var(--Text-body, #fafafb);
   text-align: right;
   font-family: Montserrat sans-serif;
@@ -1278,6 +1278,139 @@ tbody td::after {
   background-color: #82c43c;
 }
 
+.companies {
+  grid-area: main;
+}
+
+.hero-title {
+  padding: 16px 0 8px 17px;
+  color: #fafafb;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: inline;
+}
+
+.hero-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+          flex-direction: column;
+  gap: 20px 16px;
+  padding-top: 36px;
+  padding-left: 16px;
+}
+
+.hero-list-item {
+  width: 343px;
+  height: 196px;
+  background-color: #292932;
+  border-radius: 24px;
+  padding: 24px 24px 0 24px;
+  -webkit-transition: background-color 0.3s ease, border 0.3s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, border 0.3s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+  -moz-transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border 0.3s ease, -moz-transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border 0.3s ease, -webkit-transform 0.3s ease, -moz-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+}
+.hero-list-item:hover {
+  -webkit-transform: translateY(-10px);
+     -moz-transform: translateY(-10px);
+      -ms-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border: 2px solid #f07f2e;
+}
+
+.hero-list-div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+}
+
+.hero-list-icon {
+  fill: #fafafb;
+  margin-left: auto;
+  margin-right: 0;
+  width: 52px;
+  height: 52px;
+  stroke-width: 1px;
+  -webkit-transition: fill 0.3s ease, -webkit-transform 0.3s ease;
+  transition: fill 0.3s ease, -webkit-transform 0.3s ease;
+  -moz-transition: fill 0.3s ease, transform 0.3s ease, -moz-transform 0.3s ease;
+  transition: fill 0.3s ease, transform 0.3s ease;
+  transition: fill 0.3s ease, transform 0.3s ease, -webkit-transform 0.3s ease, -moz-transform 0.3s ease;
+}
+.hero-list-icon:hover {
+  fill: #f07f2e;
+  stroke: #f07f2e;
+  -webkit-transform: scale(1.1);
+     -moz-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.hero-list-title {
+  color: #fafafb;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.hero-list-loc {
+  fill: #82c43c;
+  margin-right: 8px;
+  -webkit-transition: color 0.3s ease, -webkit-transform 0.3s ease;
+  transition: color 0.3s ease, -webkit-transform 0.3s ease;
+  -moz-transition: transform 0.3s ease, color 0.3s ease, -moz-transform 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease, -webkit-transform 0.3s ease, -moz-transform 0.3s ease;
+}
+.hero-list-loc:hover {
+  -webkit-transform: scale(1.1);
+     -moz-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+  color: #f07f2e;
+}
+
+.hero-list-button {
+  color: #f07f2e;
+  margin-top: 32px;
+  border-radius: 12px;
+  border: 1px solid;
+  border-color: #f07f2e;
+  width: 89px;
+  height: 36px;
+  text-align: center;
+  -webkit-transition: background-color 0.3s ease, color 0.3s ease, -webkit-transform 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, -webkit-transform 0.3s ease;
+  -moz-transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, -moz-transform 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, -webkit-transform 0.3s ease, -moz-transform 0.3s ease;
+}
+.hero-list-button:hover {
+  background-color: #f07f2e;
+  color: #292932;
+  -webkit-transform: scale(1.05);
+     -moz-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.blu-icon {
+  stroke: #fafafb;
+  -webkit-transition: stroke 0.3s ease;
+  -moz-transition: stroke 0.3s ease;
+  transition: stroke 0.3s ease;
+}
+.blu-icon:hover {
+  stroke: #f07f2e;
+}
 @media only screen and (min-width: 768px) {
   .main {
     gap: 36px;
@@ -1291,8 +1424,21 @@ tbody td::after {
   .reports-item {
     gap: 32px;
   }
+  .hero-list {
+    -webkit-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+       -moz-box-orient: horizontal;
+       -moz-box-direction: normal;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+    -webkit-justify-content: space-evenly;
+       -moz-box-pack: space-evenly;
+            justify-content: space-evenly;
+  }
 }
-
 @media only screen and (min-width: 1200px) {
   .reports, .tasks, .board-item {
     padding: 24px;
@@ -1338,7 +1484,6 @@ tbody td::after {
     margin-right: auto;
   }
 }
-
 @media only screen and (min-width: 1440px) {
   .co-workers {
     padding: 20px;
@@ -1352,7 +1497,6 @@ tbody td::after {
     background-color: #292932;
   }
 }
-
 @media only screen and (max-width: 1199.98px) {
   .sidebar {
     position: fixed;
@@ -1417,13 +1561,11 @@ tbody td::after {
             transition-delay: 400ms;
   }
 }
-
 @media only screen and (max-width: 767.98px) {
   .co-workers-table {
     display: none;
   }
 }
-
 @media (hover: hover) {
   .btn--primary:hover, .btn--primary:focus {
     background-color: #f15c27;
