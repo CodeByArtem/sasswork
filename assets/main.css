@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Montserrat";
   src: url("/sasswork/assets/Montserrat-Regular.woff2") format("woff2"), url("/sasswork/assets/Montserrat-Regular.woff") format("woff");
@@ -242,6 +243,16 @@ summary {
 .page {
   min-width: 375px;
 }
+.compani .sidebar {
+  grid-area: sidebar; /* sidebar в своей области */
+}
+.compani .header {
+  grid-area: header; /* header в своей области */
+}
+.compani .main {
+  grid-area: main; /* main в своей области */
+  padding: 16px; /* Добавляем отступы, если нужно */
+}
 
 .header {
   display: -webkit-box;
@@ -253,6 +264,7 @@ summary {
      -moz-box-align: center;
           align-items: center;
   padding: 16px;
+  background-color: #292932;
   -webkit-box-shadow: 0 1px 0 0 #292932 inset;
           box-shadow: 0 1px 0 0 #292932 inset;
 }
@@ -422,6 +434,7 @@ summary {
   padding: 16px;
   margin-bottom: 40px;
   border-radius: 12px;
+  background-color: #1C1C24;
 }
 
 .co-workers-title {
@@ -1070,12 +1083,12 @@ tbody td::after {
   position: relative;
   width: 100%;
   height: 100%;
-  background-color: #13131a;
+  background-color: #292932;
 }
 
 .menu-list {
   border-top: 1px solid;
-  border-color: #292932;
+  border-color: #1C1C24;
 }
 .menu-list .menu-link {
   -webkit-transition: 300ms ease;
@@ -1279,7 +1292,7 @@ tbody td::after {
 }
 
 .companies {
-  grid-area: main;
+  display: grid;
 }
 
 .hero-title {
@@ -1287,6 +1300,17 @@ tbody td::after {
   color: #fafafb;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: inline;
+}
+
+.paragraf {
+  padding-left: 17px;
+}
+
+.svg-button {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
 }
 
 .hero-list {
@@ -1306,7 +1330,7 @@ tbody td::after {
 }
 
 .hero-list-item {
-  width: 343px;
+  width: 359px;
   height: 196px;
   background-color: #292932;
   border-radius: 24px;
@@ -1411,7 +1435,7 @@ tbody td::after {
 .blu-icon:hover {
   stroke: #f07f2e;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px){
   .main {
     gap: 36px;
     padding: 36px;
@@ -1439,7 +1463,7 @@ tbody td::after {
             justify-content: space-evenly;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1200px){
   .reports, .tasks, .board-item {
     padding: 24px;
   }
@@ -1447,7 +1471,14 @@ tbody td::after {
     display: grid;
     grid-template-columns: 248px 1fr;
     grid-template-rows: 68px 1fr;
-    grid-template-areas: "sidebar header" "sideebar main";
+    grid-template-areas: "sidebar header" "sidebar main";
+  }
+  .compani {
+    display: grid;
+    grid-template-columns: 248px 1fr; /* 248px для sidebar, остальное пространство для main */
+    grid-template-rows: 68px 1fr; /* 68px для header, остальное пространство для main */
+    grid-template-areas: "sidebar header" "sidebar main"; /* sidebar и header на одной строке, а main на второй */
+    height: 100vh; /* Обеспечиваем, чтобы контейнер занимал всю высоту экрана */
   }
   .sidebar {
     grid-area: sidebar;
@@ -1483,8 +1514,15 @@ tbody td::after {
   .search-field {
     margin-right: auto;
   }
+  .hero-title {
+    padding-top: 37px;
+    padding-left: 36px;
+  }
+  .paragraf {
+    padding-left: 36px;
+  }
 }
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1440px){
   .co-workers {
     padding: 20px;
     background-color: #292932;
@@ -1493,11 +1531,17 @@ tbody td::after {
   .co-workers-title {
     margin-bottom: 36px;
   }
+  .co-workers-table thead {
+    background-color: #1C1C24;
+  }
   tbody td::after {
     background-color: #292932;
   }
+  .board-item {
+    background-color: #1C1C24;
+  }
 }
-@media only screen and (max-width: 1199.98px) {
+@media only screen and (max-width: 1199.98px){
   .sidebar {
     position: fixed;
     top: 0;
@@ -1561,12 +1605,12 @@ tbody td::after {
             transition-delay: 400ms;
   }
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 767.98px){
   .co-workers-table {
     display: none;
   }
 }
-@media (hover: hover) {
+@media (hover: hover){
   .btn--primary:hover, .btn--primary:focus {
     background-color: #f15c27;
     -webkit-box-shadow: 0 4px 10px 0 rgba(240, 127, 46, 0.25);
